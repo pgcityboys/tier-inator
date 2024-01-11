@@ -22,8 +22,8 @@ def find_stations_info():
     try:
         RADIUS = 500
         args = request.args
-        lat = args.get("lat", default=54.37, type=float)
-        lon = args.get("lon", default=18.62, type=float)
+        lat = args.get("lat", default=54.35472849867326, type=float)
+        lon = args.get("lon", default=18.593692109902946, type=float)
         
         vehiclesInRadiusRequest = f"lat={lat}&lng={lon}&radius={RADIUS}"
         response = requests.get(TIER_URL + "/v1/vehicle?" + vehiclesInRadiusRequest, headers=TIER_HEADERS)
